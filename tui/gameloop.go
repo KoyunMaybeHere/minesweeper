@@ -16,10 +16,15 @@ import (
 
 var (
 	selected   = lipgloss.NewStyle().Foreground(lipgloss.Color("0")).Background(lipgloss.Color("3")).Bold(true)
-	flag       = lipgloss.NewStyle().Foreground(lipgloss.Color("9"))  // Red
+	flag       = lipgloss.NewStyle().Foreground(lipgloss.Color("1"))  // Dark Red/Maroon
 	green      = lipgloss.NewStyle().Foreground(lipgloss.Color("10")) // Green
 	blue       = lipgloss.NewStyle().Foreground(lipgloss.Color("4"))  // Blue
 	red        = lipgloss.NewStyle().Foreground(lipgloss.Color("9"))  // Red
+	purple     = lipgloss.NewStyle().Foreground(lipgloss.Color("5"))  // Purple
+	yellow     = lipgloss.NewStyle().Foreground(lipgloss.Color("11"))  // Yellow
+	teal     = lipgloss.NewStyle().Foreground(lipgloss.Color("14"))  // Teal
+	dark     = lipgloss.NewStyle().Foreground(lipgloss.Color("0"))  // Dark
+	grey     = lipgloss.NewStyle().Foreground(lipgloss.Color("7"))  // Grey
 	noColor    = lipgloss.NewStyle().Foreground(lipgloss.NoColor{})
 	fieldStyle = lipgloss.NewStyle().Border(lipgloss.RoundedBorder())
 )
@@ -271,6 +276,16 @@ func (m gameModel) view() string {
 					style = green
 				case 3:
 					style = red
+				case 4:
+					style = purple
+				case 5:
+					style = yellow
+				case 6:
+					style = teal
+				case 7:
+					style = dark
+				case 8:
+					style = grey
 				default:
 					style = red
 				}
